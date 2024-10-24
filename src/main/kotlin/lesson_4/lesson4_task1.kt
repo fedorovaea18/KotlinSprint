@@ -13,4 +13,3 @@ fun main() {
     println("Доступность столиков на сегодня: $availableToday\nДоступность столиков на завтра: $availableTomorrow")
 
 }
-
