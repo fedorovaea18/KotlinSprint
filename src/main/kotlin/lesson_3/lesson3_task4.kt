@@ -6,11 +6,11 @@ fun main() {
     var stepTo: String = "E4"
     var numberOfStep: Int = 1
 
-    println("$stepFrom-$stepTo;$numberOfStep")
+    println("[$stepFrom-$stepTo;$numberOfStep]")
 
     stepFrom = "D2"
     stepTo = "D3"
     numberOfStep = 2
-    println("$stepFrom-$stepTo;$numberOfStep")
+    println("[$stepFrom-$stepTo;$numberOfStep]")
 
 }
