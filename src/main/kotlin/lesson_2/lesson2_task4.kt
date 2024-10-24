@@ -5,10 +5,10 @@ fun main() {
 
     val crystalOre: Int =7
     val ironOre: Int = 11
-    val buff: Double = 0.20
+    val buff: Int = 20
 
-    val buffOfCrystalOre: Int = (crystalOre * buff).toInt()
-    val bufOfIronOre: Int = (ironOre * buff).toInt()
+    val buffOfCrystalOre: Int = (crystalOre * buff / 100)
+    val bufOfIronOre: Int = (ironOre * buff / 100)
 
     println(buffOfCrystalOre)
     println(bufOfIronOre)
