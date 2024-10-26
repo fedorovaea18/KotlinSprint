@@ -9,7 +9,7 @@ fun main() {
 
     println("Для авторизации решите пример: $number1 + $number2")
 
-    val userAnswer = readLine()!!.toInt()
+    val userAnswer = readln().toInt()
 
     if(userAnswer == mathExample) {
         println("Добро пожаловать!")
