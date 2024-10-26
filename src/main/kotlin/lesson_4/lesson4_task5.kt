@@ -8,16 +8,16 @@ const val MIN_FOOD_BOXES = 50
 fun main() {
 
     println("Наличие повреждений корпуса (true/false)")
-    val hasDamage = readLine()!!.toBoolean()
+    val hasDamage = readln().toBoolean()
 
     println("Текущий состав экипажа")
-    val crewCount = readLine()!!.toInt()
+    val crewCount = readln().toInt()
 
     println("Количество ящиков с провизией на борту")
-    val foodBoxes = readLine()!!.toInt()
+    val foodBoxes = readln().toInt()
 
     println("Благоприятность метеоусловий (true/false)")
-    val isWeatherGood = readLine()!!.toBoolean()
+    val isWeatherGood = readln().toBoolean()
 
     if (!hasDamage && (crewCount >= MIN_CREW_COUNT && crewCount <= MAX_CREW_COUNT) && foodBoxes > MIN_FOOD_BOXES) {
         println("Корабль может отправиться в долгосрочное плавание")
