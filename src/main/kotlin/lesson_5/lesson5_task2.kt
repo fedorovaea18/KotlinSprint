@@ -6,7 +6,7 @@ fun main() {
 
     println("Укажите свой год рождения")
 
-    val userYearOfBirth = readLine()!!.toInt()
+    val userYearOfBirth = readln().toInt()
     val currentYear = 2024
 
     if ((currentYear - userYearOfBirth) >= AGE_OF_MAGORITY) {
