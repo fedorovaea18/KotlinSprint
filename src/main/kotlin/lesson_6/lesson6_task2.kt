@@ -3,13 +3,9 @@ package ru.fedorova.spring.lesson_6
 fun main() {
 
     println("Введите количество секунд")
-    var seconds = readln().toInt()
+    val seconds = readln().toInt()
 
-    while (seconds > 0) {
-        println("Прошло $seconds секунд")
-        Thread.sleep(1000)
-        seconds--
-    }
+    Thread.sleep(seconds * 1000L)
+    println("Прошло $seconds секунд")
 
 }
-
