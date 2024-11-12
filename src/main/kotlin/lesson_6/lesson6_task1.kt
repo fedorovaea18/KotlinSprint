@@ -8,21 +8,23 @@ fun main() {
     println("Создать пароль")
     val registeredPassword = readln().toString()
 
-    var isAuthenticated = false
+    var isAuthenticated: Boolean
 
-    while (!isAuthenticated) {
+    do {
         println("Введите ваш логин:")
         val inputUsername = readln().toString()
 
         println("Введите ваш пароль:")
         val inputPassword = readln().toString()
 
-        if (inputUsername == registeredUsername && inputPassword == registeredPassword) {
-            isAuthenticated = true
-            println("Авторизация прошла успешно.")
-        } else {
+        isAuthenticated = inputUsername == registeredUsername && inputPassword == registeredPassword
+
+        if (!isAuthenticated) {
             println("Неверный логин или пароль. Попробуйте снова.")
         }
-    }
+
+    } while (!isAuthenticated)
+
+    println("Авторизация прошла успешно.")
 
 }
