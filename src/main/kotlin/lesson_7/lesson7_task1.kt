@@ -2,14 +2,16 @@ package ru.fedorova.spring.lesson_7
 
 fun main() {
 
+    val lettersRange: CharRange = 'a'..'z'
+    val numbersRange: IntRange = 0..9
     var password = ""
 
     for (i in 0 until 6) {
         if (i % 2 == 0) {
-            val letter = ('a'..'z').random()
+            val letter = lettersRange.random()
             password += letter
         } else {
-            val number = (0..9).random()
+            val number = numbersRange.random()
             password += number
         }
     }
