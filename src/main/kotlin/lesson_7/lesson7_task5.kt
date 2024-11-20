@@ -7,18 +7,21 @@ fun main() {
 
     val lowercaseLettersRange: CharRange = 'a'..'z'
     val uppercaseLettersRange: CharRange = 'A'..'Z'
-    val numbersRange: IntRange = 0..9
+    val numbersRange: CharRange = '0'..'9'
 
     val password: MutableList<Char> = mutableListOf()
 
-    for (i in 0 until userPasswordLength) {
-        val randomChar = (0..2).random()
-        when (randomChar) {
-            0 -> password.add(lowercaseLettersRange.random())
-            1 -> password.add(uppercaseLettersRange.random())
-            2 -> password.add(numbersRange.random().toString()[0])
-        }
+    password.add(lowercaseLettersRange.random())
+    password.add(uppercaseLettersRange.random())
+    password.add(numbersRange.random())
+
+    val allChars = lowercaseLettersRange + uppercaseLettersRange + numbersRange
+
+    for (i in 3 until userPasswordLength) {
+        password.add(allChars.random())
     }
+
+    password.shuffle()
 
     println("Сгенерированный пароль: ${password.joinToString("")}")
 
