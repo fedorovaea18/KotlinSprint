@@ -1,5 +1,7 @@
 package ru.fedorova.spring.lesson_10
 
+const val MIN_PASSWORD_LENGTH = 4
+
 fun main() {
 
     println("Введите логин")
@@ -13,7 +15,7 @@ fun main() {
 }
 
 fun isValidUsernameAndPassword(username: String, password: String) {
-    if (username.length < 4 || password.length < 4) {
+    if (username.length < MIN_PASSWORD_LENGTH  || password.length < MIN_PASSWORD_LENGTH ) {
         println("Логин или пароль недостаточно длинные")
     } else {
         println("Привет, $username!")
