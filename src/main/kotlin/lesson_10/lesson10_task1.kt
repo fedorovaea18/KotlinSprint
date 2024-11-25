@@ -9,7 +9,7 @@ fun main() {
     val userMove = getMove()
 
     val result = when {
-        userMove!! > computerMove!! -> "Победило человечество"
+        userMove > computerMove -> "Победило человечество"
         computerMove > userMove -> "Победила машина"
         else -> "Победила дружба"
     }
@@ -18,7 +18,7 @@ fun main() {
 
 }
 
-fun getMove(): Int? {
+fun getMove(): Int {
     val move = (1..6).random()
     println("Выпало: $move")
     return move
