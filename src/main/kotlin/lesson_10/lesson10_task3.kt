@@ -1,5 +1,7 @@
 package ru.fedorova.spring.lesson_10
 
+const val EVEN_INDEX = 2
+
 fun main() {
 
     println("Введите длину пароля")
@@ -16,7 +18,7 @@ fun generatePassword(length: Int): String {
     val password = mutableListOf<Char>()
 
     for (i in 0 until length) {
-        if (i % 2 == 0) {
+        if (i % EVEN_INDEX == 0) {
             password.add(numbers.random())
         } else {
             password.add(specialChars.random())
