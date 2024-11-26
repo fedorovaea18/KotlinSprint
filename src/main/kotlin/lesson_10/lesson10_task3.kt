@@ -14,7 +14,7 @@ fun main() {
 
 fun generatePassword(length: Int): String {
     val numbers = 48..57
-    val specialChars = 33..47
+    val specialChars = 32..47
     val password = mutableListOf<Char>()
 
     for (i in 0 until length) {
