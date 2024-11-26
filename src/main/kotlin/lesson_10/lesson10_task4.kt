@@ -9,10 +9,10 @@ fun main() {
 
         if (result == "user") {
             countUserWins++
-    }
+        }
 
-    println("Хотите бросить кости еще раз? Введите Да или Нет")
-    val userContinueAnswer = readLine().toString()
+        println("Хотите бросить кости еще раз? Введите Да или Нет")
+        val userContinueAnswer = readLine().toString()
 
     } while (userContinueAnswer == "Да")
 
