@@ -3,6 +3,7 @@ package ru.fedorova.spring.lesson_6
 fun main() {
 
     var attempt = 3
+    var isAuthenticated = false
 
     println("Для входа в приложение вам необходимо доказать, что вы не бот. У вас есть $attempt попытки.")
 
@@ -17,8 +18,8 @@ fun main() {
         val userNumber = readln().toInt()
 
         if (userNumber == hiddenNumber) {
-            println("Добро пожаловать!")
-            return
+            isAuthenticated = true
+            break
         } else {
             attempt--
             println("Неверно. Попробуй решить заново. Осталось попыток: $attempt")
@@ -26,6 +27,11 @@ fun main() {
 
     }
 
-    println("Доступ запрещен")
+    if (isAuthenticated) {
+        println("Добро пожаловать!")
+        return
+    } else {
+        println("Доступ запрещен")
+    }
 
 }
