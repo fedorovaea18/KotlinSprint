@@ -13,15 +13,15 @@ fun main() {
 }
 
 fun generatePassword(length: Int): String {
-    val numbers = 48..57
-    val specialChars = 32..47
+    val numbers = '0'..'9'
+    val specialChars =  ' '..'/'
     val password = mutableListOf<Char>()
 
     for (i in 0 until length) {
         if (i % EVEN_INDEX == 0) {
-            password.add(numbers.random().toChar())
+            password.add(numbers.random())
         } else {
-            password.add(specialChars.random().toChar())
+            password.add(specialChars.random())
         }
     }
 
