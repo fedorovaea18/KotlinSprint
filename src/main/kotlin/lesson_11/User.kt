@@ -53,3 +53,27 @@ class User3(
 ) {
 
 }
+
+class Room(
+    val cover: String,
+    val name: String,
+    val users: MutableList<User3>,
+) {
+
+    fun addUser(user: User3) {
+        users.add(user)
+        println("Пользователь ${user.name} добавлен в $name")
+    }
+
+    fun updateUserStatus(username: String, status: String) {
+        users.forEach(
+            { user ->
+                if (user.name == username) {
+                    user.status = status
+                }
+            }
+        )
+        println("Пользователь $username обновил статус на $status")
+    }
+
+}
