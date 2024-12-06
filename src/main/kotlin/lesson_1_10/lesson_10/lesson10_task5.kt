@@ -34,8 +34,11 @@ fun authorize(inputUsername: String, inputUserPassword: String): String? {
 }
 
 fun generateToken(): String {
-    val ch = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
-    return (1..32).map { ch.random() }.joinToString("")
+    val number = '0'..'9'
+    val symbolsUpper = 'a'..'z'
+    val symbolsLower = 'A'..'Z'
+    val allowedChars = number + symbolsLower + symbolsUpper
+    return (1..32).map { allowedChars.random() }.joinToString("")
 }
 
 fun getBasket(token: String): List<String>? {
