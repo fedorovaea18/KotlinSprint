@@ -2,7 +2,7 @@ plugins {
     kotlin("jvm") version "2.0.20"
 }
 
-group = "ru.fedorova.spring"
+group = "ru.fedorova.sprint"
 version = "1.0-SNAPSHOT"
 
 repositories {
