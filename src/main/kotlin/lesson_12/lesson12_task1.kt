@@ -1,6 +1,6 @@
 package ru.fedorova.spring.lesson_12
 
-class Weather{
+class Weather {
 
     var dayTemperature: Int = 50
     var nightTemperature: Int = -50
