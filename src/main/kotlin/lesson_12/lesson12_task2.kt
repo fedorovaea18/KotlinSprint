@@ -1,11 +1,11 @@
 package ru.fedorova.spring.lesson_12
 
-class WeatherSecond(val dayTemperature: Int, val nightTemperature: Int, val rain: Boolean) {
+class WeatherSecond(val dayTemperature: Int, val nightTemperature: Int, val isRaining: Boolean) {
 
     fun displayWeather() {
         println("Дневная температура: $dayTemperature")
         println("Ночная температура: $nightTemperature")
-        println("Наличие осадков в течение суток: $rain")
+        println("Наличие осадков в течение суток: $isRaining")
     }
 
 }
