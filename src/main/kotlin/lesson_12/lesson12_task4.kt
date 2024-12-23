@@ -1,0 +1,22 @@
+package ru.fedorova.spring.lesson_12
+
+class WeatherFourth(dayTemperatureInKelvin: Int, nightTemperatureInKelvin: Int, _isRaining: Boolean) {
+
+    val dayTemperature : Int = dayTemperatureInKelvin - 273
+    val nightTemperature : Int = nightTemperatureInKelvin - 273
+    val isRaining = _isRaining
+
+    init {
+        println("Дневная температура: $dayTemperature")
+        println("Ночная температура: $nightTemperature")
+        println("Наличие осадков в течение суток: $isRaining")
+        }
+
+    }
+
+
+fun main() {
+
+    val weather = WeatherFourth(320, 310, false)
+
+}
