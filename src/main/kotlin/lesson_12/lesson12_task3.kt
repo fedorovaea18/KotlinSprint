@@ -1,9 +1,11 @@
 package ru.fedorova.spring.lesson_12
 
+const val KELVIN_TO_CELSIUS = 273
+
 class WeatherThird(dayTemperatureInKelvin: Int, nightTemperatureInKelvin: Int, _isRaining: Boolean) {
 
-    val dayTemperature : Int = dayTemperatureInKelvin - 273
-    val nightTemperature : Int = nightTemperatureInKelvin - 273
+    val dayTemperature : Int = dayTemperatureInKelvin - KELVIN_TO_CELSIUS
+    val nightTemperature : Int = nightTemperatureInKelvin - KELVIN_TO_CELSIUS
     val isRaining = _isRaining
 
     fun displayWeather() {
