@@ -1,5 +1,8 @@
 package ru.fedorova.spring.lesson_14
 
+const val BLACK_COLOR = "black"
+const val WHITE_COLOR = "white"
+
 abstract class Figure(
     val color: String,
 ) {
@@ -45,17 +48,17 @@ fun main() {
 
     val figures = mutableListOf<Figure>()
 
-    figures.add(Circle("black",5))
-    figures.add(Circle("black",10))
-    figures.add(Circle("white",17))
+    figures.add(Circle(BLACK_COLOR,5))
+    figures.add(Circle(BLACK_COLOR,10))
+    figures.add(Circle(WHITE_COLOR,17))
 
-    figures.add(Rectangle("white",1, 100))
-    figures.add(Rectangle("white",2, 5))
-    figures.add(Rectangle("black",100, 1000))
+    figures.add(Rectangle(WHITE_COLOR,1, 100))
+    figures.add(Rectangle(WHITE_COLOR,2, 5))
+    figures.add(Rectangle(BLACK_COLOR,100, 1000))
 
-    val sumOfBlackPerimeter = figures.filter { it.color == "black" }.sumOf { it.perimeter() }
+    val sumOfBlackPerimeter = figures.filter { it.color == BLACK_COLOR }.sumOf { it.perimeter() }
 
-    val sumOfWhiteSquare = figures.filter { it.color == "white" }.sumOf { it.square() }
+    val sumOfWhiteSquare = figures.filter { it.color == WHITE_COLOR }.sumOf { it.square() }
 
     println("Сумма периметров черных фигур: $sumOfBlackPerimeter")
     println("Сумма площадей всех белых фигур: $sumOfWhiteSquare")
