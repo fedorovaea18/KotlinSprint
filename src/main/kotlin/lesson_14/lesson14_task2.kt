@@ -1,7 +1,6 @@
 package ru.fedorova.spring.lesson_14
 
-
-open class ShipFirst(
+open class CruiseShip(
     val name: String = "Лайнер",
     val speed: Int = 60,
     val countOfPassengers: Int = 500,
@@ -18,17 +17,16 @@ open class ShipFirst(
         println("Способ погрузки:")
         load()
 
-
     }
 
 }
 
-class ShipSecond(
+class Freighter(
     name: String,
     speed: Int,
     countOfPassengers: Int,
     val cargoCapacity: Int,
-) : ShipFirst(name, speed, countOfPassengers) {
+) : CruiseShip(name, speed, countOfPassengers) {
 
     override fun load() {
         println("$name активирует погрузочный кран")
@@ -41,12 +39,12 @@ class ShipSecond(
 
 }
 
-class ShipThird(
+class IcebreakerShip(
     name: String,
     speed: Int,
     countOfPassengers: Int,
     val isBreakIce: Boolean = true,
-) : ShipFirst(name, speed, countOfPassengers) {
+) : CruiseShip(name, speed, countOfPassengers) {
 
     override fun load() {
         println("$name открывает ворота со стороны кормы")
@@ -61,11 +59,11 @@ class ShipThird(
 
 fun main() {
 
-    val liner1  = ShipFirst()
+    val liner1  = CruiseShip()
 
-    val cargoShip1 = ShipSecond("Грузовой корабль", 20, 15,1000)
+    val cargoShip1 = Freighter("Грузовой корабль", 20, 15,1000)
 
-    val icebreaker1 = ShipThird("Ледокол", 10, 5)
+    val icebreaker1 = IcebreakerShip("Ледокол", 10, 5)
 
     liner1.shipInfo()
     cargoShip1.shipInfo()
