@@ -1,7 +1,7 @@
 package ru.fedorova.spring.lesson_17
 
 class Ship(
-    val name: String,
+    var name: String,
     val averageSpeed: Int,
     val port: String,
 ) {
