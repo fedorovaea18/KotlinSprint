@@ -12,6 +12,6 @@ fun main() {
 
     println("Ты можешь добавить в аквариум следующих рыб:")
 
-    for (i in Aquarium.values()) println(i.fish)
+    for (i in Aquarium.entries) println(i.fish)
 
 }
