@@ -5,8 +5,8 @@ fun String.vowelCount(): Int {
     val vowels = "aeiouAEIOU"
     var count = 0
 
-    forEach { char ->
-        if (char in vowels) {
+    forEach {
+        if (it in vowels) {
             count++
         }
     }
