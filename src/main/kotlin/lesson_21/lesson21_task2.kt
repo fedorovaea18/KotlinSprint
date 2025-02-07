@@ -2,15 +2,7 @@ package ru.fedorova.spring.lesson_21
 
 fun List<Int>.evenNumbersSum(): Int {
 
-    var sum = 0
-
-    forEach {
-        if (it % 2 == 0) {
-            sum += it
-        }
-    }
-
-    return sum
+    return this.filter { it % 2 == 0 }.sum()
 
 }
 
@@ -21,3 +13,6 @@ fun main() {
     println("Сумма четных чисел в списке $numbers: ${numbers.evenNumbersSum()}")
 
 }
+
+//Предлагаю уже максимально использовать инструменты языка и для поиска суммы использовать соответствующие экстеншены:
+//для фильтрации и нахождения суммы.
