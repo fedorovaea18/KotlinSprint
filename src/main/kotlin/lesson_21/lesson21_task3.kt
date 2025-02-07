@@ -16,6 +16,4 @@ fun main() {
     println(gamePlayer1.isHealthy())
     println(gamePlayer2.isHealthy())
 
-
 }
-
