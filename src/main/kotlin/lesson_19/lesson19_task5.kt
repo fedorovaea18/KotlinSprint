@@ -3,6 +3,7 @@ package ru.fedorova.spring.lesson_19
 enum class Gender {
     FEMALE,
     MALE,
+    UNDEFINDED,
 }
 
 class Person(
@@ -24,10 +25,10 @@ fun main() {
         val gender = when(genderInput) {
             "женский" -> Gender.FEMALE
             "мужской" -> Gender.MALE
-            else -> null
+            else -> Gender.UNDEFINDED
         }
 
-        if (gender != null) {
+        if (gender != Gender.UNDEFINDED) {
             personList.add(Person(name, gender))
         }
 
