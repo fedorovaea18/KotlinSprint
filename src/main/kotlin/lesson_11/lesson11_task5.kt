@@ -49,6 +49,8 @@ fun main() {
 
     forum.createNewMessage(user1.userId, "Привет! Я Глаша. Как дела?!")
     forum.createNewMessage(user2.userId,"Привет, Глаша! А я Даша. У меня всё хорошо!")
+    forum.createNewMessage(user1.userId, "Как погода? У нас солнечно!")
+    forum.createNewMessage(user2.userId,"У нас тоже, пойду гулять.")
 
     forum.printThread()
 
