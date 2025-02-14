@@ -11,11 +11,11 @@ class Tank(private var currentPatron: Patron? = null) {
 
     fun loadPatron(patron: Patron) {
         currentPatron = patron
-        println("Патрон: $patron")
+        println("Патрон: $currentPatron")
     }
 
-    fun shoot(patron: Patron) {
-        println("Урон: ${patron.damage}")
+    fun shoot() {
+        println("Урон: ${currentPatron?.damage}")
     }
 
 }
@@ -25,12 +25,12 @@ fun main() {
     val tank1 = Tank()
 
     tank1.loadPatron(Patron.BLUE)
-    tank1.shoot(Patron.BLUE)
+    tank1.shoot()
 
     tank1.loadPatron(Patron.GREEN)
-    tank1.shoot(Patron.GREEN)
+    tank1.shoot()
 
     tank1.loadPatron(Patron.RED)
-    tank1.shoot(Patron.RED)
+    tank1.shoot()
 
 }
