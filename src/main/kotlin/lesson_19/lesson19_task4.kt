@@ -7,9 +7,10 @@ enum class Patron(val damage: Int) {
 
 }
 
-class Tank {
+class Tank(private var currentPatron: Patron? = null) {
 
     fun loadPatron(patron: Patron) {
+        currentPatron = patron
         println("Патрон: $patron")
     }
 
