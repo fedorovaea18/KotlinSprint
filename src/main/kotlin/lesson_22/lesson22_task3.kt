@@ -11,6 +11,8 @@ fun main() {
     val person = Person("Геннадий", 28, "мужской")
 
     val (name, age, gender) = person
-    println("Имя: $name, Возраст: $age, Пол: $gender")
+    println("Имя: $name")
+    println("Возраст: $age")
+    println("Пол: $gender")
 
 }
