@@ -15,7 +15,10 @@ fun main() {
         dateTime = "01.03.2025 12:00",
         distanceFromEarth = 4.3)
 
-    val (name, description, dateTime, distanceFromEarth) = alphaCentauri
+    val name = alphaCentauri.component1()
+    val description = alphaCentauri.component2()
+    val dateTime = alphaCentauri.component3()
+    val distanceFromEarth = alphaCentauri.component4()
 
     println("Название места: $name")
     println("Описание места: $description")
