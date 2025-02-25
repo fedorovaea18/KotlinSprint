@@ -5,3 +5,4 @@ import java.io.File
 fun File.prependLowercaseWord(word: String) {
     this.writeText(word.lowercase() + " " + this.readText())
 }
+
